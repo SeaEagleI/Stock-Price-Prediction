@@ -9,3 +9,6 @@ The StrategyBase in strategy.py offers a rudimentary implementation of trading l
 4. LSTM
 5. Attention-LSTM (ALSTM)
 6. Emperical Mode Decomposition ALSTM
+
+### 参考
+- https://github.com/JoshuaWu1997/EMD-ALSTM-Multi-Factor-Stock-Profit-Prediction
