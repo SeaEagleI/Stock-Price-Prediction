@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
-
 import os
 from atrader import *
 import numpy as np
 import pandas as pd
-from data_process.parameters import cat, factor_list, back
+
+from data_process.factor_list import get_infomation
+from data_process.parameters import cat
+
+factor_list, select_list, back = get_infomation(cat)
 
 
 def get_fd(context):

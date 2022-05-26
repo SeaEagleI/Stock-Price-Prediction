@@ -1,5 +1,5 @@
 import pandas as pd
-from data_process.parameters import cat, factor_list
+from data_process.parameters import cat
 import numpy as np
 
 
