@@ -1,0 +1,16 @@
+# python3.8
+matplotlib
+seaborn
+pandas
+numpy
+tushare
+scipy
+tensorflow
+scikit-learn
+pmdarima
+keras
+pystan==2.18.0.0
+fbprophet
+statsmodels
+pyecharts
+openpyxl

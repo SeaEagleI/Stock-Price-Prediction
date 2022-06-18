@@ -1,6 +1,7 @@
 # directory
 __pycache__/
 .idea/
+old/
 
 # file
 .gitignore
