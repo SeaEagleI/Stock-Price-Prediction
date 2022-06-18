@@ -121,16 +121,16 @@ elif args.model == 'DecisionTree':
     a.make_predict(2500)
 
 elif args.model == 'KNN':
-    a = kNN_pridict(data[:1000])
-    a.makePrediction(700)
+    a = kNN_pridict(data)
+    a.makePrediction(2500)
 
 elif args.model == 'LSTM':
     a = LSTM_Predict(data)
     a.makePrediction(2500)
 
 elif args.model == 'Prophet':
-    a = Prophet_Predict(data[-1000:])
-    a.makePrediction(750)
+    a = Prophet_Predict(data)
+    a.makePrediction(2500)
 
 elif args.model == 'SVM':
     a = SVM_Predict(data)

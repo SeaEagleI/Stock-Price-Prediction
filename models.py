@@ -200,6 +200,10 @@ class AutoARIMA_pridict:
         forecast = pd.DataFrame(forecast,
                                 index=valid.index,
                                 columns=['Prediction'])
+        y_fore = forecast['Prediction']
+        y_test = valid['Close']
+        print(f'Model test MAE: {mae(y_fore,y_test):.3f}')
+        print(f'Model test RMSE: {mse(y_fore,y_test, squared=False):.3f}')
         # 画图
         valid['Predictions'] = forecast['Prediction']
         plt.clf()
@@ -283,6 +287,10 @@ class kNN_pridict:
         # 画图
         valid['Predictions'] = 0
         valid['Predictions'] = preds
+        y_fore = valid['Predictions']
+        y_test = valid['Close']
+        print(f'Model test MAE: {mae(y_fore,y_test):.3f}')
+        print(f'Model test RMSE: {mse(y_fore,y_test, squared=False):.3f}')
         plt.clf()
         plt.plot(valid[['Close', 'Predictions']],
                  label=['ground truth', 'prediction'])
@@ -343,6 +351,10 @@ class LSTM_Predict:
         print('valid长度是：' + str(len(valid)))
         print(len(closing_price))
         valid['Predictions'] = closing_price
+        y_fore = valid['Predictions']
+        y_test = valid['Close']
+        print(f'Model test MAE: {mae(y_fore,y_test):.3f}')
+        print(f'Model test RMSE: {mse(y_fore,y_test, squared=False):.3f}')
         plt.clf()
         plt.plot(train['Close'], label='train')
         plt.plot(valid['Close'], label='ground truth')
@@ -374,13 +386,18 @@ class Prophet_Predict:
         forecast_valid = forecast['yhat'][node:]
         # 画图
         valid['Predictions'] = forecast_valid.values
+        y_fore = valid['Predictions']
+        y_test = valid['y']
+        print(f'Model test MAE: {mae(y_fore,y_test):.3f}')
+        print(f'Model test RMSE: {mse(y_fore,y_test, squared=False):.3f}')
         plt.clf()
-        plt.plot(train['y'], label='train')
-        plt.plot(valid['y'], label='ground truth')
-        plt.plot(valid['Predictions'], label='prediction')
-        plt.legend()
-        plt.savefig('images/prophet.png')
-        plt.show()
+        fig = model.plot(forecast, xlabel='Date', ylabel='Close')
+        plt.title("Amazon Stock Price Forecast", fontsize=16)
+        plt.savefig('images/prophet1.png')
+        plt.clf()
+        model.plot_components(forecast)
+        plt.savefig('images/prophet2.png')
+
 
 
 class SVM_Predict:

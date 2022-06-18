@@ -13,8 +13,7 @@
 - 每日资金情况图.html 回测结果图，需要pyecharts打开
 
 ## 环境配置
-需要python3.8，其他依赖使用以下命令安装：
-`pip install -r requirements.txt`
+需要python3.8，其他依赖使用`pip install -r requirements.txt`命令安装
 
 ## 运行说明
 - 时间序列预测  
@@ -32,6 +31,53 @@
 
 - 回测  
 运行命令```python backtest.py```
+
+## 实验结果
+```
+linearRegression:
+  Model train accuracy: 99.923%
+  Model test accuracy: 98.442%
+  Model train MAE: 0.424
+  Model train RMSE: 0.800
+  Model test MAE: 2.338
+  Model test RMSE: 3.252
+DeterministProcess
+  Model train accuracy: 99.923%
+  Model test accuracy: 98.443%
+  Model train MAE: 0.425
+  Model train RMSE: 0.799
+  Model test MAE: 2.339
+  Model test RMSE: 3.251
+ARIMA
+  Best model:  ARIMA(0,1,0)(2,1,0)[12]          
+  Total fit time: 47.517 seconds
+  Model test MAE: 73.689
+  Model test RMSE: 80.137
+KNN
+  Model test MAE: 47.711
+  Model test RMSE: 53.677
+LSTM
+  Model test MAE: 4.349
+  Model test RMSE: 5.701
+Prophet
+  Model test MAE: 39.901
+  Model test RMSE: 44.794
+SVM
+	accuracy=52.31%
+DecisionTree
+	train accuracy: 0.550400
+  test accuracy: 0.476266
+  roc: 0.500000
+```
+
+|       Model        |  MAE   |  RMSE  |
+|:------------------:|:------:|:------:|
+|  linearRegression  | 2.338  | 3.252  |
+| DeterministProcess | 2.339  | 3.251  |
+|       ARIMA        | 73.689 | 80.137 |
+|        KNN         | 47.711 | 53.677 |
+|        LSTM        | 4.349  | 5.701  |
+|      Prophet       | 39.901 | 44.794 |
 
 ## 参考项目
 
