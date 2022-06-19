@@ -7,7 +7,7 @@
 - AMZN.csv 时间序列预测使用的数据集，为2010.01-2022.06的Amazon 股价变化情况，来自[Kaggle](https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks?select=sp500_stocks.csv)
 - backtest.py 回测
 - draw_line.py 回测结果展示，backtest.py中自动调用
-- 各月股票队列.xlsx 回测时使用的股票队列，来自参考项目2，日期范围为2020.04-2020.12
+- 各月股票队列.xlsx 回测时使用的股票队列，日期范围为2020.04-2020.12，来自参考项目2
 - 个股持有情况分析.xlsx 回测结果文件
 - 持有期收益率情况图.html 回测结果图，需要pyecharts打开
 - 每日资金情况图.html 回测结果图，需要pyecharts打开
