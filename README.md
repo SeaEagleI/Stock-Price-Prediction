@@ -83,8 +83,8 @@ DecisionTree
 
 ### 纯机器学习预测（不涉及因子建模）
 - https://www.kaggle.com/code/nedahs/apple-stock-time-series-ml-models/notebook
-- https://github.com/LightingFx/hs300_stock_predict
 - https://github.com/moyuweiqing/A-stock-prediction-algorithm-based-on-machine-learning
+- https://github.com/LightingFx/hs300_stock_predict
 
 ### 多因子分析及预测（已放弃）
 - https://github.com/phonegapX/alphasickle
