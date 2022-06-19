@@ -7,7 +7,7 @@
 - AMZN.csv 时间序列预测使用的数据集，为2010.01-2022.06的Amazon 股价变化情况，来自[Kaggle](https://www.kaggle.com/datasets/andrewmvd/sp-500-stocks?select=sp500_stocks.csv)
 - backtest.py 回测
 - draw_line.py 回测结果展示，backtest.py中自动调用
-- 各月股票队列.xlsx 回测时使用的股票队列，2020.04-2020.12，不知道哪里搞来的
+- 各月股票队列.xlsx 回测时使用的股票队列，2020.04-2020.12，来自参考项目2
 - 个股持有情况分析.xlsx 回测结果文件
 - 持有期收益率情况图.html 回测结果图，需要pyecharts打开
 - 每日资金情况图.html 回测结果图，需要pyecharts打开
@@ -82,9 +82,9 @@ DecisionTree
 ## 参考项目
 
 ### 纯机器学习预测（不涉及因子建模）
-- https://www.kaggle.com/code/nedahs/apple-stock-time-series-ml-models/notebook
-- https://github.com/moyuweiqing/A-stock-prediction-algorithm-based-on-machine-learning
-- https://github.com/LightingFx/hs300_stock_predict
+1. https://www.kaggle.com/code/nedahs/apple-stock-time-series-ml-models/notebook
+2. https://github.com/moyuweiqing/A-stock-prediction-algorithm-based-on-machine-learning
+3. https://github.com/LightingFx/hs300_stock_predict
 
 ### 多因子分析及预测（已放弃）
 - https://github.com/phonegapX/alphasickle
